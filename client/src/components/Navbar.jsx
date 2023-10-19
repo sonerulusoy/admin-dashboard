@@ -87,24 +87,19 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                 component="img"
                 alt="profile"
                 src={profileImage}
-                height="32px"
-                width="32px"
-                borderRadius="50%"
+                height="35px"
+                width="35px"
+                borderRadius="25%"
                 sx={{ objectFit: "cover" }}
+                
               />
-              <Box textAlign="left">
+              <Box textAlign="left" >
                 <Typography
                   fontWeight="bold"
-                  fontSize="0.85rem"
+                  fontSize="1rem"
                   sx={{ color: theme.palette.secondary[100] }}
                 >
                   {user.name}
-                </Typography>
-                <Typography
-                  fontSize="0.75rem"
-                  sx={{ color: theme.palette.secondary[100] }}
-                >
-                  {user.occupation}
                 </Typography>
               </Box>
               <ArrowDropDownOutlined

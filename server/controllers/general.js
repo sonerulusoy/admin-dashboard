@@ -14,15 +14,12 @@ export const getUser = async (req, res) => {
 
 export const getDashboardStats = async (req,res) => {
     try {
-        //hardcoded values
         const currentMonth = "November";
         const currentYear = 2021;
-        const currentDay= "2021-11-15"
+        const currentDay= "2021-08-01"
 
-        /* recent transactions */
         const transactions = await Transaction.find().limit(50).sort({createdOn: -1});
 
-        /* Overall Stats */
         const overallStat = await OverallStat.find({year: currentYear});
 
         const {

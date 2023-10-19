@@ -57,7 +57,7 @@ const Geography = () => {
                         features={geoData.features}
                         margin={{ top: 0, right: 0, bottom: 0, left: -50 }}
                         domain={[0, 100]}
-                        unknownColor="#666666"
+                        unknownColor="#666"
                         label="properties.name"
                         valueFormat=".1s"
                         projectionScale={150}

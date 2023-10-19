@@ -64,21 +64,6 @@ const Dashboard = () => {
     return <Box m="1.5rem 2.5rem">
         <FlexBetween>
             <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
-            <Box>
-                <Button
-                    sx={{
-                        backgroundColor: theme.palette.secondary.light,
-                        color: theme.palette.background.alt,
-                        fontSize: "14px",
-                        fontWeight: "bold",
-                        padding: "10px 20px"
-                    }}
-                >
-                    <DownloadOutlined sx={{ mr: "10px" }} />
-                    Download Reports
-                </Button>
-            </Box>
         </FlexBetween>
         <Box
             mt="20px"
@@ -90,11 +75,10 @@ const Dashboard = () => {
                 "& > div": { gridColumn: isNonMediumScreen ? undefined : "span 12" }
             }}
         >
-            {/* row 1 */}
             <StatBox
                 title="Total Customers"
                 value={data && data.totalCustomers}
-                increase="+14%"
+                increase="+11%"
                 description="Since last month"
                 icon={
                     <Email sx={{
@@ -106,7 +90,7 @@ const Dashboard = () => {
             <StatBox
                 title="Sales Today"
                 value={data && data.todayStats.totalSales}
-                increase="+21%"
+                increase="52%"
                 description="Since last month"
                 icon={
                     <PointOfSale sx={{
@@ -128,7 +112,7 @@ const Dashboard = () => {
             <StatBox
                 title="Monthly Sales"
                 value={data && data.thisMonthStats.totalSales}
-                increase="+5%"
+                increase="+8%"
                 description="Since last month"
                 icon={
                     <PersonAdd sx={{
@@ -140,7 +124,7 @@ const Dashboard = () => {
             <StatBox
                 title="Yearly Sales"
                 value={data && data.yearlySalesTotal}
-                increase="+43%"
+                increase="+31%"
                 description="Since last month"
                 icon={
                     <Traffic sx={{
@@ -149,7 +133,6 @@ const Dashboard = () => {
                     />
                 }
             />
-            {/* row 2 */}
             <Box
                 gridColumn="span 8"
                 gridRow="span 3"
